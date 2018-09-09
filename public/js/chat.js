@@ -79,7 +79,6 @@ socket.on('newLocationMessage', function (message){
 jQuery('#message-form').on('submit', function(e){
     e.preventDefault();
     socket.emit('createMessage', {
-        from : 'User',
         text : jQuery('[name = message]').val()
     }, function (data) {
         console.log('got it!', data);
